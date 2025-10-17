@@ -19,7 +19,7 @@
             },
             "to": [
                 { "key_code": "return_or_enter" },
-                { "shell_command": "osascript -e 'do shell script \"/usr/local/bin/xkbswitch -s 3\" \n set temp to the clipboard \n   set the clipboard to \"<span class=vertical-space>&nbsp;</span>\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.1 \n end tell \n set the clipboard to temp'" }
+                { "shell_command": "osascript -e 'do shell script \"/usr/local/bin/xkbswitch -s 1\" \n set temp to the clipboard \n   set the clipboard to \"<span class=vertical-space>&nbsp;</span>\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.1 \n end tell \n set the clipboard to temp'" }
             ],
             "type": "basic"
         }
