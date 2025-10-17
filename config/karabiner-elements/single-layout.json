@@ -1,0 +1,27 @@
+{
+    "description": "⌥⏎ → HTML for vertical space in Obsidian",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^md\\.obsidian"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "from": {
+                "key_code": "return_or_enter",
+                "modifiers": {
+                    "mandatory": ["option"],
+                    "optional": []
+                }
+            },
+            "to": [
+                { "key_code": "return_or_enter" },
+                { "shell_command": "osascript -e 'set temp to the clipboard \n   set the clipboard to \"<span class=vertical-space>&nbsp;</span>\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.1 \n end tell \n set the clipboard to temp'" }
+            ],
+            "type": "basic"
+        }
+    ]
+}

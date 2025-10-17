@@ -1,0 +1,102 @@
+/**
+ * Description: @obsidianms CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
+ * Author: stdword
+ * Repository: https://github.com/stdword/obsidian13-canvas-smooth-cards
+ *
+ * Version: 1
+ * Last change: 2025-10-17
+ */
+
+
+/* vertical space */
+
+/* prevent scrollbars text shifting */
+.markdown-source-view .cm-content.cm-lineWrapping > .cm-line {
+    margin-right: -4px !important;
+}
+
+
+
+/* paragraphs */
+.canvas .el-p > p:has(> span.vertical-space) {
+    margin-top: 24px;
+}
+.canvas .el-p > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+/* number lists */
+.canvas ol::before {
+    margin-left: -2px;
+}
+.canvas ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.canvas ul > li > ol > li {
+    margin-left: 36px;
+}
+
+
+
+/* bullet lists */
+.canvas ul::before {
+    margin-left: -2px;
+}
+
+.canvas ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.canvas .el-ul > ul > li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.canvas ol > li > ul > li {
+    margin-left: 36px;
+}
+
+/* bullet lists :: bullet */
+.canvas ul > li > .list-bullet {
+    margin-top: 2px;
+}
+.canvas .has-list-bullet .list-bullet::after {
+    margin-left: -4px;
+    margin-top: -3px;
+}
+.cm-formatting-list.cm-formatting-list-ul {
+    margin-right: 7px;
+}
+
+
+
+/* headers */
+.canvas .el-h1 > h1 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.canvas .el-h2 > h2,
+.canvas .el-h3 > h3 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.canvas .markdown-preview-section > .markdown-preview-pusher + :is(.el-h2) > :is(h2),
+.canvas .markdown-preview-section > .markdown-preview-pusher + :is(.el-h3) > :is(h3) {
+    margin-top: 0px !important;
+}
+
+.mod-inside-iframe .HyperMD-header {
+    padding-top: 0px !important;
+}
+
+
+
+/* table */
+.canvas .el-table {
+    margin-top: 24px;
+}
