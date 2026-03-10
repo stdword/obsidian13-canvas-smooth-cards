@@ -1,0 +1,177 @@
+/**
+ * Description:
+ *     Obsidian CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
+ *     This file is addition for required canvas-smooth-cards.css snippet. It synchronizes quotes and callouts.
+ * Note: It also change quotes and callouts in markdown mode (out of canvas) for compatibility with canvas.
+ *
+ * Author: stdword
+ * Repository: https://github.com/stdword/obsidian13-canvas-smooth-cards
+ *
+ * Version: 1
+ * Last change: 2026-03-10
+ */
+
+
+/* block quote & callout */
+.canvas :is(.el-blockquote, .el-div:has(> .callout)) + .el-p > p:has(> span.vertical-space:first-child) {
+    margin-top: 24px;
+}
+
+.canvas .el-blockquote > blockquote {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    padding-left: 12px;
+}
+
+
+.cm-line.HyperMD-quote {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-right: 5px !important;
+}
+.cm-line.HyperMD-quote:not(.HyperMD-callout) {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+    &.HyperMD-quote-lazy {
+        padding-left: 14px !important;
+    }
+}
+
+
+/* callout */
+.cm-line.HyperMD-callout {
+    padding-top: 2px !important;
+    padding-bottom: 0px !important;
+}
+.canvas .el-div > .callout {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.callout-title {
+    padding-top: 5px;
+    padding-bottom: 0px;
+
+    margin-left: -3px;
+}
+.canvas .el-div > .callout > .callout-title {
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+
+.callout-content {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    padding-left: 14px;
+}
+.canvas .el-div > .callout > .callout-content {
+    margin-top: 2px;
+    margin-bottom: -1px;
+}
+
+.callout-content > p:first-of-type {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.callout-content > p:not(:first-of-type) {
+    padding-top: 0px;
+    margin-top: 24px;
+}
+
+
+
+/* adjust for lists in quotes */
+.canvas .el-blockquote > blockquote > ul {
+    margin-left: -19px;
+}
+.canvas .el-blockquote > blockquote > ul > li {
+    margin-top: -2px;
+}
+.canvas .el-blockquote > blockquote > ul > li > .list-bullet:before {
+    margin-top: 4px;
+    margin-left: 12px;
+}
+
+.canvas ul > li > blockquote {
+    margin-top: -6px;
+    margin-bottom: 0px;
+}
+
+.canvas .el-blockquote > blockquote > p:has( + ul) {
+    margin-bottom: 0px;
+}
+.canvas .el-blockquote > blockquote > ul + p {
+    margin-top: 24px;
+}
+
+
+
+/* adjust for lists in callouts */
+.canvas .el-div > .callout > .callout-content > ul > li {
+    margin-left: 24px;
+}
+.canvas .el-div > .callout > .callout-content > ul { /* only level-1 list */
+    margin-left: -13px;
+}
+.cm-callout > div > .callout > .callout-content > ul > li { /* only level-1 list */
+    margin-left: 11px;
+}
+
+.canvas .el-div > .callout > .callout-content li > ul { /* every inner list */
+    margin-top: 1px;
+    margin-left: 0px;
+}
+.canvas .el-div > .callout > .callout-content:has(> ul > li > ul) { /* adjust to prevent jumping */
+    margin-bottom: -2px;
+}
+
+.canvas .el-div > .callout > .callout-content ul > li {
+    margin-top: -2px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.cm-callout > div > .callout > .callout-content ul > li {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.canvas .el-div > .callout > .callout-content li:has( > ul) { /* fix: every inner list with list inside */
+    margin-bottom: -1px;
+}
+.canvas .el-div > .callout > .callout-content ul > li > .list-bullet {
+    margin-top: 2px;
+    margin-left: -9px;
+}
+
+.canvas   .el-div > .callout > .callout-content   ul + p,
+.cm-callout > div > .callout > .callout-content > ul + p {
+    margin-top: 24px;
+}
+.canvas   .el-div > .callout > .callout-content   p + ul,
+.cm-callout > div > .callout > .callout-content > p + ul {
+    margin-top: 0px;
+}
+
+
+
+/* AnyPuccin message bubbles adapt */
+.el-ul > ul > .task-list-item[data-task="0"],
+.el-ul > ul > .task-list-item[data-task="1"],
+.el-ul > ul > .task-list-item[data-task="2"],
+.el-ul > ul > .task-list-item[data-task="3"],
+.el-ul > ul > .task-list-item[data-task="4"],
+.el-ul > ul > .task-list-item[data-task="5"],
+.el-ul > ul > .task-list-item[data-task="6"],
+.el-ul > ul > .task-list-item[data-task="7"],
+.el-ul > ul > .task-list-item[data-task="8"],
+.el-ul > ul > .task-list-item[data-task="9"] {
+    margin-left: 0px !important;
+}
