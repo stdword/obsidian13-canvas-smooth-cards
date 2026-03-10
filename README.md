@@ -1,5 +1,5 @@
 # Smooth text cards for canvases
-@obsidianmd CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
+[Obsidian](https://github.com/obsidianmd) CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
 
 <img width="600px" src="https://github.com/user-attachments/assets/ea524e8e-c849-43d2-a9bc-8d8726353095"/>
 
@@ -27,6 +27,13 @@ Just add this code to appropriate place:
 <img width="350px" src="https://github.com/user-attachments/assets/fca0caa6-3b64-499e-8cda-26e40c39e095"/>
 
 See examples in `assets/test.canvas` file (you need to copy it to your obsidian's vault first).
+
+
+# Snippets
+
+- Main snippet: `canvas-smooth-cards.css`
+- Additional snippet for callout support: `canvas-smooth-cards_addition.css`. It is currently in draft status as of 2026-03
+   - Note: it changes the appearance of callout blocks even outside of canvases. If you don't like this behaviour — turn it off.
 
 
 # Installation (auto)
