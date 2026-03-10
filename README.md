@@ -1,5 +1,5 @@
 # Smooth text cards for canvases
-@obsidianms CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
+@obsidianmd CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
 
 <img width="600px" src="https://github.com/user-attachments/assets/ea524e8e-c849-43d2-a9bc-8d8726353095"/>
 
@@ -29,14 +29,33 @@ Just add this code to appropriate place:
 See examples in `assets/test.canvas` file (you need to copy it to your obsidian's vault first).
 
 
-# Installation
+# Installation (auto)
+
+> Note: this is recommended way, but you need to install two additional plugins
+
+1. Install [BRAT plugin](https://github.com/TfTHacker/obsidian42-brat) by TfTHacker **from Marketplace**
+2. In Obsidian: Via BRAT plugin's settings install [Snippet Downloader plugin](https://github.com/Mara-Li/obsidian-snippet-downloader)
+   + It is no longer supported and removed from Marketplace, but still works (mart 2026)
+   + But with one visual bug:
+  
+     <img width="600px" src="https://github.com/user-attachments/assets/54d2e102-241f-40ed-be56-3a79f3a6d2d2"/>
+3. In Obsidian: Add this repository to the Snippet Downloader in it's settings
+4. In Obsidian: Go to Settings → Appearance → CSS Snippets
+5. In Obsidian: Press "Reload snippets" button (with arrows icon)
+6. In Obsidian: Turn on the appropriate snippets in the list
+
+
+# Installation (manual)
+
+> Note: for every repository update you need to manually re-install snippets
+
 1. Download all `.css` files from `src` folder of this repo
 2. Open Obsidian app
 3. In Obsidian: Go to Settings → Appearance → CSS Snippets
 3. In Obsidian: Press "Open snippets folder" button (with folder icon)
 4. Move downloaded files to that folder
 5. In Obsidian: Press "Reload snippets" button (with arrows icon)
-6. In Obsidian: Turn on the appropriate snippet in the list
+6. In Obsidian: Turn on the appropriate snippets in the list
 
 
 # Configure
@@ -79,3 +98,4 @@ You can create `⌥⏎` (option + enter) keyboard shortcut via [Karabiner Elemen
 
 # Changelog
  * v1 (2025-10-17) - vertical space for h1, h2, h2, p, table, ol, ul and sync ol, ul
+ * v2 (2026-03-10) - fixed layout for headers and tables; added draft support for callouts
