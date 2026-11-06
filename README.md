@@ -1,3 +1,6 @@
+> ❗️ This code is now a part of [Obsidian Advanced Canvas](https://github.com/Developer-Mike/obsidian-advanced-canvas) plugin (see details [here](https://github.com/Developer-Mike/obsidian-advanced-canvas/issues/401) - [commit](https://github.com/Developer-Mike/obsidian-advanced-canvas/commit/b0bbe57e43aec8a947a571e43bc3010740d0f90b#diff-e79ace68f6519783466b88e1adc6985531556290b078143ffef98a468b4ac60d)).
+
+
 # Smooth text cards for canvases
 [Obsidian](https://github.com/obsidianmd) CSS snippet for smooth text cards in canvases. It visually synchronizes cards reading and editing views.
 
